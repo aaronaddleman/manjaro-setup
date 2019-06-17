@@ -2,9 +2,8 @@
 
 # https://wiki.archlinux.org/index.php/Docker
 
-# install packages
-sudo pacman -S dmenu docker docker-compose dmenu-lpass xclip ttf-ancient-font
-sudo usermod -a -G docker $USER
+# docker group
+[ $(groups | grep -q docker) ] || sudo usermod -a -G docker $USER
 
 # make some dev resources
 [ ! -d $HOME/src ] && mkdir -p $HOME/src
@@ -19,6 +18,8 @@ sudo make
 cd -
 git config --global credential.helper /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
 
+# install tfenv
+[ ! -d $HOME/.tfenv ] && git clone https://github.com/tfutils/tfenv.git ~/.tfenv 
 
 # disable the pc speaker
 # info: https://wiki.archlinux.org/index.php/PC_speaker#Globally

@@ -54,4 +54,7 @@ sudo pacman -S --needed \
 [ $(command -v yay) ] && yay -S --needed \
                              apachedirectorystudio \
                              nvm \
-                             rbenv
+                             rbenv \
+			     terragrunt \
+			     ruby-build
+
