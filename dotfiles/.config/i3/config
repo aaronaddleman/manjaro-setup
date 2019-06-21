@@ -44,8 +44,9 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec kitty
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec terminator
 bindsym $mod+Shift+n exec tilix --quake
+#bindsym $mod+Shift+n exec terminator -b --layout=quake
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -56,15 +57,16 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -combi-modi 'window#drun' -show combi -modi combi -show-icons -theme onedark
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -show-icons -theme onedark
+
 
 # allow copy and paste
 exec --no-startup-id vmware-user
 
 # Compton
 # disabled for performance
-#exec_always --no-startup-id "killall -q compton; compton --config ~/.compton.conf"
+exec_always --no-startup-id "killall -q compton; compton --config ~/.compton.conf"
 
 # wallpaper 
 exec --no-startup-id "variety > /dev/null 2>&1 &"
