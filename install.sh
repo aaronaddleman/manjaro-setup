@@ -18,6 +18,7 @@ sudo pacman -S --needed \
        jq \
        kitty \
        kitty \
+       keybase keybase-gui kbfs \
        konsole \
        libgnome-keyring \
        morc_menu \
