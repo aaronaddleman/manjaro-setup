@@ -59,3 +59,4 @@ sudo pacman -S --needed \
 			     terragrunt \
 			     ruby-build
 
+[ -d $HOME/.tgenv ] || git clone https://github.com/cunymatthieu/tgenv ~/.tgenv
