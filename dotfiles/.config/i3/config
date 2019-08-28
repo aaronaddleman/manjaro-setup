@@ -227,10 +227,10 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Ctrl+9 exec --no-startup-id blurlock
+#bindsym $mod+Ctrl+9 exec --no-startup-id blurlock
 
 # autostart applications
-exec --no-startup-id xautolock -time 10 -locker blurlock
+#exec --no-startup-id xautolock -time 10 -locker blurlock
 
 # settings for i3-gaps
 
