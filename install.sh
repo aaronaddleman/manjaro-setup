@@ -12,13 +12,14 @@ sudo pacman -S --needed \
        geckodriver \
        gnome-screenshot \
        gnome-terminal \
+       go \
        i3-gaps \
        i3exit \
        i3lock \
        jq \
-       kitty \
-       kitty \
        keybase keybase-gui kbfs \
+       kitty \
+       kitty \
        konsole \
        libgnome-keyring \
        morc_menu \
@@ -33,20 +34,23 @@ sudo pacman -S --needed \
        rofi \
        ruby \
        rxvt-unicode \
+       shellcheck \
        termdown \
        terminator \
        tilix \
        ttf-dejavu-sans-mono-powerline \
        urxvt-perls \
-       vault \
        variety \
+       vault \
+       vifm \
        wmctrl \
        xboomx \
        xclip \
        xclip \
        xorg-xbacklight \
        xorg-xfontsel gtk2fontsel \
-       xorg-xwininfo
+       xorg-xwininfo \
+       yarn
 
 
 [ -d $HOME/src/yay ] || git clone https://aur.archlinux.org/yay.git $HOME/src/yay
@@ -55,8 +59,9 @@ sudo pacman -S --needed \
 [ $(command -v yay) ] && yay -S --needed \
                              apachedirectorystudio \
                              nvm \
+                             nodejs-tern \
                              rbenv \
-			     terragrunt \
-			     ruby-build
+			                       terragrunt \
+			                       ruby-build
 
 [ -d $HOME/.tgenv ] || git clone https://github.com/cunymatthieu/tgenv ~/.tgenv
