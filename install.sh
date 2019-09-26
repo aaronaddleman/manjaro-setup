@@ -12,7 +12,7 @@ sudo pacman -S --needed \
        geckodriver \
        gnome-screenshot \
        gnome-terminal \
-       go \
+       go-pie \
        i3-gaps \
        i3exit \
        i3lock \
@@ -65,3 +65,15 @@ sudo pacman -S --needed \
 			                       ruby-build
 
 [ -d $HOME/.tgenv ] || git clone https://github.com/cunymatthieu/tgenv ~/.tgenv
+
+create_prlcc() {
+	cat <<- EOF > /etc/X11/xinit/xinitrc.d/90-prlcc.sh
+#!/usr/bin/env bash
+
+[ -x /usr/bin/prlcc ] && /usr/bin/prlcc &
+	
+EOF
+}
+
+[ -d /usr/lib/parallels-tool ] && [ ! -f /etc/X11/xinit/xinitrc.d/90-prlcc.sh ] && create_prlcc && chmod +x /etc/X11/xinit/xinitrc.d/90-prlcc.sh
+
